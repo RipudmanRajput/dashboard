@@ -1,3 +1,7 @@
+:root{
+   --blue:blue;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,358 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Nunito', sans-serif;
+  background: #e8e6f2;
+}
+li{
+  list-style: none;
+}
+/* header css */
+.header_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+}
+.header_logo {
+  width: 20%;
+}
+.header_logo span {
+  color: var(--blue);
+  text-transform: uppercase;
+}
+.search_box ,
+.menus{
+  width: 40%;
+}
+.search_filed {
+  border: 1px solid lightgray;
+  border-radius: 50px;
+  padding: 5px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.search_filed select {
+  border: none;
+  color: gray;
+  margin-right: 10px;
+  padding-right: 5px;
+  font-size: 12px;
+  font-family: 'Nunito';
+}
+select:focus-visible ,
+input:focus-visible{
+  outline: none;
+}
+.search_filed input[type="text"] {
+  border: navajowhite;
+  border-left: 2px solid lightgray;
+  padding-left: 15px;
+  font-size: 12px;
+  font-family: 'Nunito';
+}
+button.search_button {
+  background: no-repeat;
+  border: navajowhite;
+}
+.menus ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.menus ul li {
+  padding: 0px 10px;
+}
+.menus li {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Task bar */
+.task_cardBody {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-left: 15px;
+}
+span.task_icon {
+  background: var(--blue);
+  color: #fff;
+  padding: 5px 5px;
+  border-radius: 3px;
+}
+span.task_icon img {
+  width: 30px;
+  vertical-align: middle;
+}
+.task_cardBody p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 10px;
+  margin: 10px 0px;
+  width: 100%;
+}
+span.taskStatus {
+  font-size: 12px;
+  color: lightgray;
+}
+.taskbar_secton ul {
+  display: flex;
+  padding-left: 0;
+  margin-left: -15px;
+}
+.taskbar_secton ul li {
+  width: calc(100% / 5);
+}
+.page-width {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+span.taskcount {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* -------------------------------------progress section */
+.progress_block {
+  display: flex;
+  margin: 0px -10px;
+}
+.progress_card {
+  display: flex;
+  width: calc(100% / 3);
+}
+.process_title {
+  display: flex;
+  flex-direction: column;
+}
+.card_body {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100%);
+  background: #fff;
+  border-radius: 10px;
+  margin: 0px 10px;
+  padding: 20px;
+}
+.process_title,
+.monthly_progress {
+  width: 50%;
+}
+.monthly_progress {
+  position: relative;
+}
+span.sub_title {
+  font-size: 12px;
+  color: gray;
+}
+span.tirle {
+  font-size: 15px;
+  font-weight: 700;
+}
+p.select_duration {
+  margin-top: 0;
+  font-size: 12px;
+  border: 1px solid lightgrey;
+  border-radius: 50px;
+  padding: 5px 15px;
+  font-weight: 700;
+  color: var(--blue);
+  max-width: 106px;
+  float: right;
+  cursor: pointer;
+}
+.monthly_list {
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  background: #fff;
+}
+.monthly_list li {
+  font-size: 13px;
+  padding-top: 8px;
+  transition: 0.3s all;
+}
+.monthly_progress >p >span {
+  padding-left: 15px;
+  font-size: 10px;
+}
+.monthly_list {
+  display: none;
+}
+.monthly_list.drop-down-active {
+  display: block;
+  position: absolute;
+  top: 33px;
+  left: 79px;
+}
+.monthly_list li:hover {
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+  cursor: pointer;
+  color: blue;
+  transition: 0.3s all;
+}
+/* -----------------------------------charts */
+.progress_bar_block {
+  width: 100%;
+}
+.pie_chart {
+  position: relative;
+}
+.pie_chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 25;
+  max-width: 200px;
+  width: 100%;
+  margin: 0px auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(farthest-side,#fff calc(99% - 15px),blue calc(100% - 15px));
+}
+/* .pie_chart::after {
+  inset: 0;
+  position: absolute;
+  width: 100%;
+  content: "";
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(lightgreen calc(26*1%),#0000 0);
+  z-index: -1;
+} */
+.task_update{
+  border-radius: 50%;
+}
+.pie_chart::before {
+  content: "";
+  background: #fff;
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  z-index: 10;
+}
+span.percentage {
+  font-weight: 900;
+  z-index: 999;
+}
+li.unachived span.dots {
+  background-color: lightgreen;
+}
+.progress_status {
+  display: flex;
+  margin-top: 10px;
+}
+li.achived ,
+li.unachived{
+  width: 50%;
+  text-align: center;
+  font-size: 13px;
+}
+span.dots {
+  width: 7px;
+  height: 7px;
+  background-color: blue;
+  border-radius: 50px;
+  vertical-align: middle;
+  margin-right: 10px;
+  display: inline-block;
+}
+/* bar graph */
+.bar_graph {
+  display: flex;
+  height: 150px;
+}
+.Y-asix {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column-reverse;
+  align-items: center;
+  height: 100%;
+  width: 20px;
+  font-size: 10px;
+}
+.barname > span {
+  height: 100%;
+  display: inline-block;
+}
+.Y-asix span {
+  height: calc(100% / 7);
+}
+span.completed {
+    width: 3px;
+    height: 100%;
+    margin: 0px 0px 0px 2px;
+    background-color: blue;
+    display: inline-block;
+}
+span.incompleted {
+  width: 3px;
+  height: 100%;
+  margin: 0px 2px;
+  background-color: lightgreen;
+  display: inline-block;
+}
+.bar_graph div {
+  width: calc(100% / 7);
+}
+.bar_number {
+  display: flex;
+}
+span.bar_title {
+  width: calc(100% / 7);
+  font-size: 10px;
+}
+
+/* status table */
+table.status_table {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  margin-top: 20px;
+  border-spacing: 15px;
+}
+thead.status_table_head th {
+  color: #5c5c5c;
+  text-align: left;
+}
+tr.table_title th {
+  text-align: left;
+  font-size: 14px;
+}
+thead.status_table_head th td {
+  width: 25%;
+  font-size: 13px;
+}
+a.assigned,
+a.Inprocess ,
+a.overdue{
+  text-decoration: none;
+  background: orange;
+  color: #fff;
+  padding: 3px 15px;
+  display: inline-block;
+  border-radius: 50px;
+  font-size: 12px;
+}
+a.Inprocess {
+  background-color: lightgreen;
+}
+a.overdue {
+  background-color: indianred;
+}
+tr.table_data {
+  font-size: 14px;
 }
