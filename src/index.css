@@ -299,16 +299,16 @@ span.dots {
   height: calc(100% / 7);
 }
 span.completed {
-    width: 3px;
+    width: 4px;
     height: 100%;
     margin: 0px 0px 0px 2px;
     background-color: blue;
     display: inline-block;
 }
 span.incompleted {
-  width: 3px;
+  width: 4px;
   height: 100%;
-  margin: 0px 2px;
+  margin: 0px 0px 0px 2px;
   background-color: lightgreen;
   display: inline-block;
 }
